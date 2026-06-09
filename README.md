@@ -2,7 +2,7 @@
 
 ## Overview
 
-The NBO Analytics Platform combines two AI-powered agents - the **ADS Agent** and the **Segmentation Agent** - into a single Streamlit app. Together they take you from a raw SQL database all the way to named, labeled customer segments, without writing a single line of code.
+The NBO Analytics Platform combines two AI-powered agents the ADS Agent and the Segmentation Agent into a single Streamlit app. Together they take you from a raw SQL database all the way to named, labeled customer segments, without writing a single line of code.
 
 **What the platform does for you:**
 
@@ -110,7 +110,7 @@ When the app opens you will see three tabs at the top:
 
 ### Overview
 
-The ADS Agent builds an **Analytical Data Set (ADS)** - a single flat table where each row is one customer and each column is a meaningful piece of information about them (called a feature). Your database likely has dozens of separate tables - transactions, demographics, products, and so on. The ADS Agent combines the most useful information from all of them into one ready-to-use table.
+The ADS Agent builds an Analytical Data Set (ADS) a single flat table where each row is one customer and each column is a meaningful piece of information about them (called a feature). Your database likely has dozens of separate tables transactions, demographics, products, and so on. The ADS Agent combines the most useful information from all of them into one ready-to-use table.
 
 ### Pipeline
 
@@ -148,9 +148,9 @@ The AI needs to understand what your data means - not just column names. A colum
 
 ### Step 3 - Select Tables & Define Your Goal
 
-Select tables - choose the main table(s) your ADS will be built from. The app shows row counts and column counts for every table.
+Select tables: Choose the main table(s) your ADS will be built from. The app shows row counts and column counts for every table.
 
-Write your goal - describe what you want to build in plain English. Be specific - this is the single most important input; it drives everything the AI recommends.
+Write your goal : Describe what you want to build in plain English. Be specific - this is the single most important input; it drives everything the AI recommends.
 
 Good examples:
 
@@ -164,8 +164,8 @@ The AI analyses every column in your selected tables - checking data types, null
 
 Feature priority the AI follows:
 
-- **Aggregated/Derived features (preferred)** - computed values like `SUM(transaction_amount)`, `COUNT(products)`, ratios, flags
-- **Raw columns** - direct attributes like demographics or status that can't be meaningfully aggregated
+- **Aggregated/Derived features (preferred)**  computed values like `SUM(transaction_amount)`, `COUNT(products)`, ratios, flags
+- **Raw columns** direct attributes like demographics or status that can't be meaningfully aggregated
 
 For each recommendation the AI explains the source, the SQL formula, and why it helps your goal.
 
@@ -183,7 +183,7 @@ Download the feature list as Excel at any time - columns: Type | Table | Feature
 
 The AI generates a complete `SELECT` statement (or `CREATE TABLE AS SELECT`) using all your confirmed features, with block-level comments and table aliases throughout.
 
-Refine in plain English - type any change and the AI returns the full updated SQL:
+Refine in plain English where you type any change and the AI returns the full updated SQL:
 
 > "Add a WHERE clause to exclude closed accounts"
 
@@ -191,7 +191,7 @@ Refine in plain English - type any change and the AI returns the full updated SQ
 
 > "Wrap this in a CREATE TABLE called ads_credit_risk"
 
-When satisfied, click **Proceed to Segmentation** to hand your ADS directly to the Segmentation Agent.
+When satisfied, click Proceed to Segmentation to hand your ADS directly to the Segmentation Agent.
 
 ---
 
@@ -199,7 +199,7 @@ When satisfied, click **Proceed to Segmentation** to hand your ADS directly to t
 
 ### Overview
 
-The Segmentation Agent automatically groups your bank's customers into meaningful segments using machine learning - without writing a single line of code. It connects to your database, selects the right columns for your goal, runs a clustering algorithm, names each segment in plain English, and lets you explore and customise the results.
+The Segmentation Agent automatically groups your bank's customers into meaningful segments using machine learning without writing a single line of code. It connects to your database, selects the right columns for your goal, runs a clustering algorithm, names each segment in plain English, and lets you explore and customise the results.
 
 There are two experiences: a technical path for data scientists who want full control, and a business path for non-technical users who want results quickly.
 
@@ -213,13 +213,13 @@ Connect to DB -> Select Table & Goal -> Choose Algorithm -> Choose Role -> Analy
 
 Enter your database connection string. The agent connects and lists all available tables with their row and column counts. Supported connection formats are the same as the ADS Agent above.
 
-Optionally upload column description documents - PDF, Word, or Excel files that explain what your table's columns mean.
+Optionally upload column description documents  PDF, Word, or Excel files that explain what your table's columns mean.
 
 ### Step 2 - Select a Table & Define Your Goal
 
 Select a table from the list shown. One table per segmentation run.
 
-Write your segmentation objective - this is required and is the most important input. The AI uses it to decide which columns are relevant and which to ignore.
+Write your segmentation objective. The AI uses it to decide which columns are relevant and which to ignore.
 
 Good examples:
 
@@ -245,7 +245,7 @@ Not sure? Start with K-Means. It's more predictable and easier to communicate to
 **Data Scientist Path** - full technical control:
 
 - Review schema statistics for every column
-- LLM selects features - you can override any selection
+- LLM selects features 
 - Elbow chart (K-Means) or k-distance graph (DBSCAN) to find optimal parameters
 - Manual parameter tuning (K, eps, min_samples)
 - Run multiple iterations and compare them side-by-side
@@ -253,7 +253,7 @@ Not sure? Start with K-Means. It's more predictable and easier to communicate to
 
 **Business User Path** - automated, jargon-free:
 
-- Everything runs automatically - no interaction needed until results appear
+- Everything runs automatically
 - Segments shown as named cards with plain-English descriptions
 - Chat interface to ask questions about any segment
 - Business rules to refine segment boundaries
@@ -334,7 +334,7 @@ Labeled Data is capped at 200,000 rows for Excel compatibility. All summary shee
 
 The Pipeline tab shows you the complete journey from raw database tables to actionable customer segments in a visual, non-technical format. Use it to walk stakeholders through the process or orient yourself before starting a new run.
 
-It also includes a **Quick-Start Guide** - a plain-English summary of every step in both agents on one page.
+It also includes a **Quick-Start Guide** a plain-English summary of every step in both agents on one page.
 
 ---
 
@@ -348,8 +348,8 @@ It also includes a **Quick-Start Guide** - a plain-English summary of every step
 | No tables found after connecting | Verify the connection string points to the correct database |
 | Poor AI recommendations | Upload a data dictionary in Step 2 and a business logic document |
 | AI feature selection falls back to heuristic | App shows the raw AI response - retry or select columns manually |
-| DBSCAN: only 1 cluster found | eps too large - reduce it using the k-distance chart, or switch to K-Means |
-| DBSCAN: mostly noise (-1) | eps too small - increase it slightly and re-run |
+| DBSCAN: only 1 cluster found | eps too large :reduce it using the k-distance chart, or switch to K-Means |
+| DBSCAN: mostly noise (-1) | eps too small: increase it slightly and re-run |
 | Low silhouette score | Try different K (K-Means) or tune eps (DBSCAN); remove highly correlated features |
 | "MemoryError" during DBSCAN | Reduce eps or select fewer features |
 | Excel export fails | `pip install openpyxl xlsxwriter` |
