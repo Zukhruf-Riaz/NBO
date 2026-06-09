@@ -334,7 +334,7 @@ Labeled Data is capped at 200,000 rows for Excel compatibility. All summary shee
 
 The Pipeline tab shows you the complete journey from raw database tables to actionable customer segments in a visual, non-technical format. Use it to walk stakeholders through the process or orient yourself before starting a new run.
 
-It also includes a **Quick-Start Guide** a plain-English summary of every step in both agents on one page.
+It also includes a Quick-Start Guide a plain-English summary of every step in both agents on one page.
 
 ---
 
