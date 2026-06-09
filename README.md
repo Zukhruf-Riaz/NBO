@@ -265,8 +265,8 @@ Not sure? Start with K-Means. It's more predictable and easier to communicate to
 
 The app shows the full schema with statistics (data type, null %, min/max values) for every column.
 
-- Click **Let LLM select features** - the AI picks 6-30 columns that best match your goal, covering monetary, frequency, recency, demographic, product, and channel dimensions
-- Use **Select All**, **Clear All**, or **Reset** to manage the selection manually
+- Click Let LLM select features the AI picks 6-30 columns that best match your goal, covering monetary, frequency, recency, demographic, product, and channel dimensions
+- Use Select All, Clear All, or Reset to manage the selection manually
 
 **Diagnostic Chart**
 
